@@ -43,6 +43,18 @@
 			  <identifier>private.command_q_to_at</identifier>
 			  <autogen>--KeyToKey-- KeyCode::Q, ModifierFlag::COMMAND_R, KeyCode::L, ModifierFlag::OPTION_R</autogen>
 			</item>
+			<item>
+			  <name>Swap COMMAND_L and OPTION_L for TERMINAL (capi)</name>
+			  <appendix>For irssi usage, map COMMAND_L to OPTION_L for TERMINAL class apps</appendix>
+			  <appendix>Special treatment for COMMAND_L+TAB to still work as COMMAND_R+TAB</appendix>
+			  <block>
+			    <only>TERMINAL</only>
+			    <autogen>--KeyToKey-- KeyCode::COMMAND_L, KeyCode::OPTION_L</autogen>
+			    <autogen>--KeyToKey-- KeyCode::OPTION_L, KeyCode::COMMAND_L</autogen>
+			    <autogen>--KeyToKey-- KeyCode::TAB, ModifierFlag::OPTION_L, KeyCode::TAB, ModifierFlag::COMMAND_R</autogen>
+			  </block>
+			  <identifier>private.command_l_to_option_l.in.terminal</identifier>
+			</item>
 		</list>
 	</item>	
   </list>
