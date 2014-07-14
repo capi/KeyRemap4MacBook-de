@@ -55,6 +55,47 @@
 			  </block>
 			  <identifier>private.command_l_to_option_l.in.terminal</identifier>
 			</item>
+			<item>
+			  <name>Swap COMMAND_L and OPTION_L for REMOTEDESKTOPCONNECTION (capi)</name>
+			  <appendix>For RDP usage, map COMMAND_L to OPTION_L for REMOTEDESKTOPCONNECTION class apps</appendix>
+			  <appendix>Special treatment for COMMAND_L+TAB to still work as COMMAND_R+TAB</appendix>
+			  <block>
+			    <only>REMOTEDESKTOPCONNECTION</only>
+			    <autogen>--KeyToKey-- KeyCode::COMMAND_L, KeyCode::OPTION_L</autogen>
+			    <autogen>--KeyToKey-- KeyCode::OPTION_L, KeyCode::COMMAND_L</autogen>
+			  </block>
+			  <identifier>private.command_l_to_option_l.in.rdp</identifier>
+			</item>
+			<item>
+			  <name>Swap COMMAND_R and OPTION_R for REMOTEDESKTOPCONNECTION (capi)</name>
+			  <block>
+			    <only>REMOTEDESKTOPCONNECTION</only>
+			    <autogen>--KeyToKey-- KeyCode::COMMAND_R, KeyCode::OPTION_R</autogen>
+			    <autogen>--KeyToKey-- KeyCode::OPTION_R, KeyCode::COMMAND_R</autogen>
+			  </block>
+			  <identifier>private.command_r_to_coption_r.in.rdp</identifier>
+			</item>
+
+			<item>
+			  <name>Swap COMMAND_L and OPTION_L for X11 (capi)</name>
+			  <appendix>For RDP usage, map COMMAND_L to OPTION_L for X11 class apps</appendix>
+			  <appendix>Special treatment for COMMAND_L+TAB to still work as COMMAND_R+TAB</appendix>
+			  <block>
+			    <only>X11</only>
+			    <autogen>--KeyToKey-- KeyCode::COMMAND_L, KeyCode::OPTION_L</autogen>
+			    <autogen>--KeyToKey-- KeyCode::OPTION_L, KeyCode::COMMAND_L</autogen>
+			  </block>
+			  <identifier>private.command_l_to_option_l.in.X11</identifier>
+			</item>
+			<item>
+			  <name>Swap COMMAND_R and OPTION_R for X11 (capi)</name>
+			  <block>
+			    <only>X11</only>
+			    <autogen>--KeyToKey-- KeyCode::COMMAND_R, KeyCode::OPTION_R</autogen>
+			    <autogen>--KeyToKey-- KeyCode::OPTION_R, KeyCode::COMMAND_R</autogen>
+			  </block>
+			  <identifier>private.command_r_to_coption_r.in.X11</identifier>
+			</item>
 		</list>
 	</item>	
   </list>
